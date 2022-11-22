@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择背景图"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/btnBg"
+        app:layout_constraintTop_toTopOf="@id/btnBg" />
+
+    <Button
+        android:id="@+id/btnFg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择前景图"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBg" />
+
+    <TextView
+        android:id="@+id/tvFg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/btnFg"
+        app:layout_constraintTop_toTopOf="@id/btnFg" />
+
+
+    <Button
+        android:id="@+id/btnSynthesis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="合成"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etY" />
+
+
+    <TextView
+        android:id="@+id/tvX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="合成在背景x坐标(像素)"
+        app:layout_constraintBottom_toBottomOf="@id/etX"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etX" />
+
+    <EditText
+        android:id="@+id/etX"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@id/tvX"
+        app:layout_constraintTop_toBottomOf="@id/btnFg" />
+
+    <TextView
+        android:id="@+id/tvY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="合成在背景y坐标(像素)"
+        app:layout_constraintBottom_toBottomOf="@id/etY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etY" />
+
+    <EditText
+        android:id="@+id/etY"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@id/tvY"
+        app:layout_constraintTop_toBottomOf="@id/etX" />
+
+    <ImageView
+        android:id="@+id/ivSynthesis"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSynthesis" />
+</androidx.constraintlayout.widget.ConstraintLayout>
